@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import "./App.css";
 
+/**
+ * TODO: Add Twitter integration
+ * */
 function App() {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
