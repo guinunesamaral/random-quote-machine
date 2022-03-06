@@ -1,5 +1,25 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-enter {
+  opacity: 0;
+}
+
+.content-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms, transform 1000ms;
+}
+
+.content-exit {
+  opacity: 1;
+}
+
+.content-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms, transform 1000ms;
 }
 
 .App-logo {
