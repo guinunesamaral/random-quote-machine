@@ -31,6 +31,10 @@ function App() {
       });
   };
 
+  const formatTwitterText = () => {
+    return `"${quote}"%0A%0A${author}`;
+  };
+
   const handleClick = () => {
     if (!isFetching) {
       fetchQuote();
@@ -45,18 +49,27 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={handleClick}>New quote</button>
+      <a
+        className="twitter-share-button"
+        href={`https://twitter.com/intent/tweet?text=${formatTwitterText()}`}
+        data-size="large"
+        target="_blank"
+        rel="noreferrer"
+      ></a>
       <CSSTransition
         in={showContent}
         timeout={1000}
         classNames="content"
         unmountOnExit
       >
-        <div>
+        <div className="quoteContent">
           <q>{quote}</q>
           <p>{author}</p>
         </div>
       </CSSTransition>
+      <button className="newQuoteBtn" onClick={handleClick}>
+        New quote
+      </button>
     </div>
   );
 }
