@@ -1,5 +1,6 @@
 {
   "name": "random-quote-machine",
+  "homepage": "https://guinunesamaral.github.io/random-quote-machine/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,6 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "del": "rm -rf node_modules",
     "build": "react-scripts build",
@@ -43,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-transition-group": "^4.4.4"
+    "@types/react-transition-group": "^4.4.4",
+    "gh-pages": "^4.0.0"
   }
 }
