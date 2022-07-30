@@ -55,7 +55,9 @@ function App() {
         data-size="large"
         target="_blank"
         rel="noreferrer"
-      ></a>
+      >
+        <div style={{ display: "hidden" }} />
+      </a>
       <CSSTransition
         in={showContent}
         timeout={1000}
