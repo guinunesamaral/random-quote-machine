@@ -1,9 +1,11 @@
-.App {
+#quote-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  margin: auto;
+  width: 50%;
 }
 
 .content-enter {
@@ -29,7 +31,7 @@
   pointer-events: none;
 }
 
-.quoteContent {
+.content {
   max-width: 50%;
   text-align: center;
 }
@@ -50,7 +52,7 @@ p {
   margin-bottom: 0;
 }
 
-.newQuoteBtn {
+#new-quote {
   cursor: pointer;
   width: 110px;
   height: 40px;
@@ -60,11 +62,11 @@ p {
   background-color: #f1f1f1;
 }
 
-.newQuoteBtn:hover {
+#new-quote:hover {
   background-color: #cccccc;
 }
 
-.twitter-share-button {
+#tweet-quote {
   width: 40px;
   height: 40px;
   margin-bottom: 30px;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import "./App.css";
 
@@ -48,9 +48,9 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div id="quote-box">
       <a
-        className="twitter-share-button"
+        id="tweet-quote"
         href={`https://twitter.com/intent/tweet?text=${formatTwitterText()}`}
         data-size="large"
         target="_blank"
@@ -64,12 +64,12 @@ function App() {
         classNames="content"
         unmountOnExit
       >
-        <div className="quoteContent">
-          <q>{quote}</q>
-          <p>{author}</p>
+        <div className="content">
+          <q id="text">{quote}</q>
+          <p id="author">{author}</p>
         </div>
       </CSSTransition>
-      <button className="newQuoteBtn" onClick={handleClick}>
+      <button id="new-quote" onClick={handleClick}>
         New quote
       </button>
     </div>
